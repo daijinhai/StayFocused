@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Layout } from './components/Layout';
 import { Timer } from './components/Timer';
 import { SoundButton } from './components/SoundButton';

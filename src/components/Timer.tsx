@@ -279,7 +279,7 @@ export const Timer: React.FC = () => {
           <button
             onClick={handleReset}
             disabled={isRunning}
-            className={`p-2 ${theme.colors.primary} text-white rounded-lg 
+            className={`p-3 ${theme.colors.primary} text-white rounded-lg 
               transition-all duration-200 ${isRunning ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
             <RotateCcw size={20} />
