@@ -11,7 +11,7 @@ interface ThemeState {
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
-      currentThemeId: 'minimal-light',
+      currentThemeId: 'warm',
       getTheme: () => themes.find(theme => theme.id === get().currentThemeId) || themes[0],
       setTheme: (themeId: string) => {
         if (themes.some(theme => theme.id === themeId)) {

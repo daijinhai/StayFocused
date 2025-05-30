@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# 构建输出
+release
+release/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +26,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Electron 构建相关
+public/icons-win
+.npmrc

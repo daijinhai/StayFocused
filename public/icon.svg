@@ -1,0 +1,34 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="512" height="512" rx="128" fill="url(#paint0_linear)"/>
+  
+  <!-- 时钟外圈 -->
+  <circle cx="256" cy="256" r="170" stroke="white" stroke-width="20" stroke-opacity="0.9"/>
+  
+  <!-- 声波效果 -->
+  <path d="M160 256 H130" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.75" />
+  <path d="M115 256 H100" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.6" />
+  <path d="M90 256 H80" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.5" />
+  
+  <path d="M352 256 H382" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.75" />
+  <path d="M397 256 H412" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.6" />
+  <path d="M422 256 H432" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.5" />
+  
+  <!-- 时钟指针 -->
+  <path d="M256 150V256L321 321" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 内圈 -->
+  <circle cx="256" cy="256" r="35" fill="white" opacity="0.9"/>
+  
+  <!-- 声波圆环 -->
+  <circle cx="256" cy="256" r="210" stroke="white" stroke-width="4" stroke-opacity="0.3" stroke-dasharray="20 10"/>
+  <circle cx="256" cy="256" r="240" stroke="white" stroke-width="3" stroke-opacity="0.2" stroke-dasharray="15 7.5"/>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF9F43"/>
+      <stop offset="1" stop-color="#FF6B35"/>
+    </linearGradient>
+  </defs>
+</svg> 

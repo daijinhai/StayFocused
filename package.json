@@ -1,13 +1,27 @@
 {
-  "name": "stayfocused-white-noise",
+  "name": "stayfocused",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "专注时钟 & 白噪音应用",
+  "main": "electron/main.cjs",
   "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "electron:dev": "NODE_ENV=development electron .",
+    "electron:build": "npm run build && electron-builder",
+    "electron:preview": "npm run build && electron .",
+    "dist:mac": "npm run build && electron-builder --mac --arm64",
+    "dist:mac-intel": "npm run build && electron-builder --mac --x64",
+    "dist:win": "npm run build && electron-builder --win --x64",
+    "dist:win-ia32": "npm run build && electron-builder --win --ia32",
+    "generate:win-icon": "node scripts/generate-win-icon.cjs",
+    "dist": "npm run build && electron-builder --mac --arm64"
   },
   "dependencies": {
     "i18next": "^24.2.0",
@@ -23,14 +37,62 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.18",
+    "electron": "^35.5.0",
+    "electron-builder": "^24.13.3",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
+    "sharp": "^0.34.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
+  },
+  "build": {
+    "appId": "com.stayfocused.app",
+    "productName": "StayFocused",
+    "copyright": "Copyright © 2024",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "public/icon.icns",
+      "target": [
+        "dmg"
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "darkModeSupport": true
+    },
+    "dmg": {
+      "writeUpdateInfo": false
+    },
+    "win": {
+      "icon": "public/icons-win/icon.ico",
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "StayFocused 专注时钟"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "public/icons/icon-512.png"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "publish": null
   }
 }
