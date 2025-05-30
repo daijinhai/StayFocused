@@ -46,23 +46,14 @@ StayFocused 是一个帮助你保持专注的应用，通过自然声音和白�
 #### macOS
 
 1. 下载适合您Mac芯片的安装包：
-   - Apple Silicon (M1/M2/M3): [StayFocused-1.0.0-arm64.dmg](https://github.com/daijinhai/StayFocused/releases/download/v1.0.0/StayFocused-1.0.0-arm64.dmg)
-   - Intel芯片: [StayFocused-1.0.0-x64.dmg](https://github.com/daijinhai/StayFocused/releases/download/v1.0.0/StayFocused-1.0.0-x64.dmg)
+   - Apple Silicon (M1/M2/M3): [StayFocused-1.0.0-arm64.dmg](https://github.com/daijinhai/StayFocused/releases/download/V1.0.0/StayFocused-1.0.0-arm64.dmg)
+
 
 2. 打开下载的DMG文件
 3. 将StayFocused应用拖到Applications文件夹
 4. 首次启动时，如果遇到"无法验证开发者"的提示，请前往系统偏好设置→安全性与隐私，点击"仍要打开"
 
-#### Windows (即将推出)
-
-1. 下载安装包: [StayFocused-1.0.0-win.exe](https://github.com/daijinhai/StayFocused/releases/download/v1.0.0/StayFocused-1.0.0-win.exe)
-2. 运行安装程序，按照提示完成安装
-
-#### Linux (即将推出)
-
-1. 下载AppImage: [StayFocused-1.0.0.AppImage](https://github.com/daijinhai/StayFocused/releases/download/v1.0.0/StayFocused-1.0.0.AppImage)
-2. 添加执行权限: `chmod +x StayFocused-1.0.0.AppImage`
-3. 运行应用: `./StayFocused-1.0.0.AppImage`
+#### 其他系统版本（请自行源码打包） 
 
 ## 🎮 使用指南
 
