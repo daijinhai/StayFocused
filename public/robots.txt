@@ -1,0 +1,34 @@
+# Stay Focused - 专注时钟 & 白噪音
+# https://shutong.work/
+
+User-agent: *
+Allow: /
+
+# 禁止访问的目录
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /dist/
+Disallow: /build/
+
+# 允许访问的重要文件
+Allow: /favicon.svg
+Allow: /logo.svg
+Allow: /sounds/
+
+# Sitemap 位置
+Sitemap: https://shutong.work/sitemap.xml
+
+# 爬取延迟（可选，对于高流量网站）
+Crawl-delay: 1
+
+# 特定搜索引擎配置
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /

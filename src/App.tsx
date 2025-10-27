@@ -4,6 +4,8 @@ import { Timer } from './components/Timer';
 import { SoundButton } from './components/SoundButton';
 import { SavedMixes } from './components/SavedMixes';
 import { useThemeStore } from './store/useThemeStore';
+import { useSEO } from './hooks/useSEO';
+import { initAnalytics } from './utils/analytics';
 import { sounds } from './data/sounds';
 import { categoryToKey } from './data/categoryMap';
 import { useTranslation } from 'react-i18next';
@@ -14,11 +16,19 @@ function App() {
   const { t, ready } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
 
+  // 使用SEO Hook来管理动态SEO标签
+  useSEO();
+
   useEffect(() => {
     if (ready) {
       setIsLoading(false);
     }
   }, [ready]);
+
+  // 初始化分析工具
+  useEffect(() => {
+    initAnalytics();
+  }, []);
 
   if (isLoading) {
     return (
