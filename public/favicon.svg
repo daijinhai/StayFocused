@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 3C7.58172 3 4 6.58172 4 11C4 13.9611 5.60879 16.5465 8 17.9297V21H16V17.9297C18.3912 16.5465 20 13.9611 20 11C20 6.58172 16.4183 3 12 3Z" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="64" height="64" rx="16" fill="url(#paint0_linear)"/>
+  
+  <!-- 时钟外圈 -->
+  <circle cx="32" cy="32" r="21" stroke="white" stroke-width="3" stroke-opacity="0.9"/>
+  
+  <!-- 声波效果 -->
+  <path d="M20 32 H16" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.75" />
+  <path d="M14 32 H12" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+  
+  <path d="M44 32 H48" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.75" />
+  <path d="M50 32 H52" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+  
+  <!-- 时钟指针 -->
+  <path d="M32 18V32L40 40" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 内圈 -->
+  <circle cx="32" cy="32" r="4" fill="white" opacity="0.9"/>
+  
+  <!-- 声波圆环 -->
+  <circle cx="32" cy="32" r="26" stroke="white" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="3 1.5"/>
+  
+  <!-- 渐变定义 -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF9F43"/>
+      <stop offset="1" stop-color="#FF6B35"/>
+    </linearGradient>
+  </defs>
 </svg>

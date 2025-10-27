@@ -4,7 +4,11 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',
   build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
     // 代码分割优化
     rollupOptions: {
       output: {
@@ -35,7 +39,7 @@ export default defineConfig({
   },
   // 开发服务器配置
   server: {
-    // 启用HTTP/2
+    port: 5173,
     https: false,
     // 预热常用文件
     warmup: {
