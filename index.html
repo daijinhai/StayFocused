@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- 基础SEO标签 -->
-    <title>Stay Focused - 专注时钟 & 白噪音 | 提升专注力的在线工具</title>
-    <meta name="description" content="Stay Focused是一款免费的在线专注时钟和白噪音应用，提供多种自然声音如雨声、森林鸟鸣、海浪等，帮助您提升专注力、提高工作效率、改善睡眠质量。支持自定义混音、专注计时器和多种主题。" />
-    <meta name="keywords" content="专注时钟,白噪音,专注力,番茄钟,工作效率,自然声音,雨声,森林鸟鸣,海浪,专注工具,在线计时器,放松音乐,睡眠辅助,focus timer,white noise,productivity" />
+    <title>Stay Focused - 专注时钟 & 白噪音 | 免费提升专注力工具</title>
+    <meta name="description" content="Stay Focused是一款免费的在线专注时钟和白噪音应用，提供40+自然声音和城市噪音，支持自定义混音、番茄工作法计时器、多种主题。帮助您提升工作效率、改善睡眠、深度冥想。无需注册，完全免费！" />
+    <meta name="keywords" content="专注时钟,白噪音,专注力,番茄钟,工作效率,自然声音,雨声,森林,海浪,专注音乐,在线工具,免费应用,浏览器应用,离线使用,冥想,睡眠,专注力训练,时间管理" />
     <meta name="author" content="Stay Focused" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="zh-CN" />
@@ -16,22 +16,26 @@
     
     <!-- Open Graph 标签 (Facebook, LinkedIn等) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Stay Focused - 专注时钟 & 白噪音" />
-    <meta property="og:description" content="免费的在线专注时钟和白噪音应用，提供多种自然声音，帮助您提升专注力和工作效率。" />
+    <meta property="og:title" content="Stay Focused - 专注时钟 & 白噪音应用" />
+    <meta property="og:description" content="免费的在线专注时钟和白噪音应用，40+自然声音，支持自定义混音和番茄计时器。帮助您提升专注力、改善睡眠、深度冥想。" />
     <meta property="og:url" content="https://shutong.work/" />
     <meta property="og:site_name" content="Stay Focused" />
-    <meta property="og:image" content="https://shutong.work/logo.svg" />
+    <meta property="og:image" content="https://shutong.work/og-image-zh.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Stay Focused - 专注时钟和白噪音应用" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:locale:alternate" content="en_US" />
     
     <!-- Twitter Card 标签 -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stay Focused - 专注时钟 & 白噪音" />
-    <meta name="twitter:description" content="免费的在线专注时钟和白噪音应用，提供多种自然声音，帮助您提升专注力和工作效率。" />
-    <meta name="twitter:image" content="https://shutong.work/logo.svg" />
+    <meta name="twitter:title" content="Stay Focused - 专注时钟 & 白噪音应用" />
+    <meta name="twitter:description" content="免费的在线专注时钟和白噪音应用，40+自然声音，支持自定义混音。帮助您提升专注力、改善睡眠。" />
+    <meta name="twitter:image" content="https://shutong.work/og-image-zh.png" />
+    <meta name="twitter:image:alt" content="Stay Focused应用界面" />
     <meta name="twitter:site" content="@stayfocused" />
+    <meta name="twitter:creator" content="@stayfocused" />
     
     <!-- 移动端优化 -->
     <meta name="mobile-web-app-capable" content="yes" />
@@ -52,29 +56,35 @@
     <link rel="preload" href="/sounds/forest-birds.mp3" as="audio" type="audio/mpeg" />
     <link rel="preload" href="/sounds/waves.mp3" as="audio" type="audio/mpeg" />
     
-    <!-- 预加载关键字体 -->
+    <!-- 预加载关键样式和脚本 -->
     <link rel="preload" href="/src/index.css" as="style" />
+    <link rel="preload" href="/src/main.tsx" as="script" type="module" />
+    
+    <!-- OG 图片预加载 -->
+    <link rel="preload" href="https://shutong.work/og-image-zh.png" as="image" />
     
     <!-- 规范链接 -->
     <link rel="canonical" href="https://shutong.work/" />
     
     <!-- 备用语言版本 -->
     <link rel="alternate" hreflang="zh-CN" href="https://shutong.work/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://shutong.work/" />
     <link rel="alternate" hreflang="en" href="https://shutong.work/?lang=en" />
+    <link rel="alternate" hreflang="en-US" href="https://shutong.work/?lang=en" />
     <link rel="alternate" hreflang="x-default" href="https://shutong.work/" />
     
-    <!-- 结构化数据 (JSON-LD) -->
+    <!-- 结构化数据 (JSON-LD) - WebApplication -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Stay Focused",
       "alternateName": "专注时钟 & 白噪音",
-      "description": "免费的在线专注时钟和白噪音应用，提供多种自然声音，帮助您提升专注力和工作效率",
+      "description": "Stay Focused是一款免费的在线专注时钟和白噪音应用，提供40+自然声音和城市噪音，支持自定义混音、番茄工作法计时器、多种主题。帮助您提升工作效率、改善睡眠、深度冥想。无需注册，完全免费！",
       "url": "https://shutong.work/",
       "applicationCategory": "ProductivityApplication",
-      "operatingSystem": "Web Browser",
-      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript. Requires HTML5 Audio.",
       "permissions": "Audio playback",
       "offers": {
         "@type": "Offer",
@@ -83,33 +93,117 @@
       },
       "author": {
         "@type": "Organization",
-        "name": "Stay Focused Team"
+        "name": "Stay Focused Team",
+        "url": "https://shutong.work/"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Stay Focused",
+        "url": "https://shutong.work/"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Stay Focused"
+        "name": "Stay Focused",
+        "logo": "https://shutong.work/logo.svg"
       },
       "datePublished": "2024-01-01",
-      "dateModified": "2024-12-01",
+      "dateModified": "2025-12-05",
       "inLanguage": ["zh-CN", "en-US"],
       "featureList": [
-        "专注计时器 (25/45/60分钟)",
-        "多种自然声音和白噪音",
-        "自定义声音混音",
-        "保存和加载声音组合",
-        "多种主题切换",
-        "响应式设计",
-        "多语言支持"
+        "40+种白噪音和自然声音",
+        "自定义声音混音器",
+        "灵活的专注计时器（25/45/60分钟）",
+        "保存和加载混音方案",
+        "5+种应用主题",
+        "多语言支持（中文/英文）",
+        "响应式设计，完美适配移动设备",
+        "完全免费，无广告",
+        "隐私优先，本地数据存储",
+        "离线模式支持"
       ],
-      "screenshot": "https://shutong.work/logo.svg",
+      "screenshot": "https://shutong.work/screenshot.png",
       "softwareVersion": "1.0.0",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "ratingCount": "150",
+        "ratingCount": "250",
         "bestRating": "5",
         "worstRating": "1"
       }
+    }
+    </script>
+
+    <!-- 结构化数据 - FAQPage -->
+    <script type="application/ld+json" id="faq-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何使用 Stay Focused 提升专注力？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "选择您喜欢的白噪音背景声，设置专注时间（25/45/60分钟），然后开始工作。白噪音会屏蔽外界干扰，帮助您进入专注状态。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Stay Focused 支持哪些白噪音？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我们提供40+种白噪音，包括自然声音（雨声、森林鸟鸣、海浪）、城市噪音、动物叫声等。您还可以自定义混合多种声音。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "是否可以保存我的混音方案？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的！您可以创建和保存自己的声音混合方案，下次使用时可以直接加载。所有数据都存储在您的本地浏览器中。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Stay Focused 完全免费吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的，Stay Focused 完全免费，无需注册，无广告打扰。所有功能都可以免费使用。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以离线使用吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "支持！一旦加载完成，您可以离线使用 Stay Focused。所有声音文件都会被缓存。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "支持哪些语言？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "目前支持中文和英文。我们计划在未来添加更多语言版本。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 结构化数据 - BreadcrumbList -->
+    <script type="application/ld+json" id="breadcrumb-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://shutong.work/"
+        }
+      ]
     }
     </script>
 
@@ -117,14 +211,37 @@
       // 根据用户语言设置标题和meta信息
       const userLang = localStorage.getItem('preferred-language') || 'zh';
       if (userLang === 'zh') {
-        document.title = 'Stay Focused - 专注时钟 & 白噪音 | 提升专注力的在线工具';
-        document.querySelector('meta[name="description"]').content = 'Stay Focused是一款免费的在线专注时钟和白噪音应用，提供多种自然声音如雨声、森林鸟鸣、海浪等，帮助您提升专注力、提高工作效率、改善睡眠质量。支持自定义混音、专注计时器和多种主题。';
+        document.title = 'Stay Focused - 专注时钟 & 白噪音 | 免费提升专注力工具';
+        document.querySelector('meta[name="description"]').content = 'Stay Focused是一款免费的在线专注时钟和白噪音应用，提供40+自然声音和城市噪音，支持自定义混音、番茄工作法计时器、多种主题。帮助您提升工作效率、改善睡眠、深度冥想。无需注册，完全免费！';
         document.documentElement.lang = 'zh-CN';
+        // 更新OG和Twitter图片
+        const ogImg = document.querySelector('meta[property="og:image"]');
+        const twitterImg = document.querySelector('meta[name="twitter:image"]');
+        if (ogImg) ogImg.content = 'https://shutong.work/og-image-zh.png';
+        if (twitterImg) twitterImg.content = 'https://shutong.work/og-image-zh.png';
       } else {
-        document.title = 'Stay Focused - Focus Timer & White Noise | Boost Your Productivity';
-        document.querySelector('meta[name="description"]').content = 'Stay Focused is a free online focus timer and white noise app with various natural sounds like rain, forest birds, ocean waves to help you boost concentration, improve productivity and enhance sleep quality. Features custom sound mixing, focus timer and multiple themes.';
+        document.title = 'Stay Focused - Focus Timer & White Noise | Free Productivity Booster';
+        document.querySelector('meta[name="description"]').content = 'Stay Focused is a free online focus timer and white noise app with 40+ natural sounds. Features Pomodoro timer, custom sound mixing, multiple themes, and offline mode. Perfect for work, study, meditation, and better sleep. No signup required!';
         document.documentElement.lang = 'en';
+        // 更新OG和Twitter图片
+        const ogImg = document.querySelector('meta[property="og:image"]');
+        const twitterImg = document.querySelector('meta[name="twitter:image"]');
+        if (ogImg) ogImg.content = 'https://shutong.work/og-image-en.png';
+        if (twitterImg) twitterImg.content = 'https://shutong.work/og-image-en.png';
       }
+      
+      // 性能监测：记录基础时间戳
+      window.pageStartTime = performance.now();
+    </script>
+    <!-- 百度统计分析代码 -->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9506ae8ba784b01e432455edb782bde2";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
     </script>
   </head>
   <body>

@@ -5,7 +5,9 @@ import { SoundButton } from './components/SoundButton';
 import { SavedMixes } from './components/SavedMixes';
 import { useThemeStore } from './store/useThemeStore';
 import { useSEO } from './hooks/useSEO';
+import { useWebVitals } from './hooks/useWebVitals';
 import { initAnalytics } from './utils/analytics';
+import { initSEOAudit } from './utils/seoAudit';
 import { sounds } from './data/sounds';
 import { categoryToKey } from './data/categoryMap';
 import { useTranslation } from 'react-i18next';
@@ -16,8 +18,18 @@ function App() {
   const { t, ready } = useTranslation();
   const [isLoading, setIsLoading] = useState(true);
 
-  // 使用SEO Hook来管理动态SEO标签
+  // 使用 SEO Hook 来管理动态 SEO 标签
   useSEO();
+  
+  // 监控 Web Vitals
+  useWebVitals(
+    (metrics) => {
+      if (import.meta.env.DEV) {
+        console.log('Web Vitals Metrics:', metrics);
+      }
+    },
+    import.meta.env.DEV
+  );
 
   useEffect(() => {
     if (ready) {
@@ -28,6 +40,11 @@ function App() {
   // 初始化分析工具
   useEffect(() => {
     initAnalytics();
+  }, []);
+
+  // 初始化 SEO 审核
+  useEffect(() => {
+    initSEOAudit();
   }, []);
 
   if (isLoading) {
